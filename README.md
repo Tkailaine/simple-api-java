@@ -1,6 +1,6 @@
 # Simple API Java
 
-Aplicação API 
+Aplicação API em Java com Spring Boot
 
 ## Pré-requisitos
 
