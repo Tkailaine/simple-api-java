@@ -1,0 +1,29 @@
+name: 03 - Actions
+
+on:
+    push:
+        branches: "feature/**"
+
+jobs:
+    checkout_java_docker:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Git Checkout
+              uses: actions/checkout@v4 #indentificamos actions configuradas quando o parâmetro é uses (essa é de checkout )
+
+            - name: Setup Java SDK
+              uses: actions/setup-java@v4 #baixa iamgem do java versão 4
+              with:
+                distribution: 'temurin'
+                java-version: '21'
+
+            - name: Build
+              uses: docker/build-push-action@v6 #Buil di docker
+              with:
+                push: false
+
+            - name: Executar scripts
+              run: |
+                git branch
+                java --version
+                mvn clean package
