@@ -1,3 +1,4 @@
+name: Meu primeiro workflow
 on: push #aqui definimos o tipo de evento que irá disparar o github actions, nesse caso será o push de commits
 
 jobs: #Definimos os trabalhos realizados
