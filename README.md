@@ -14,7 +14,7 @@ Aplicação API em Java com Spring Boot
 docker compose up --build
 ```
 
-## Testes unitários (validação)
+## Testes unitários
 
 ./mvnw test
 
