@@ -1,0 +1,17 @@
+on: push #aqui definimos o tipo de evento que irá disparar o github actions, nesse caso será o push de commits
+
+jobs: #Definimos os trabalhos realizados
+    job1-hello: #tarefa 1
+        runs-on: ubuntu-latest #servidor que irá ser executado
+        steps:
+        - name: Imprimir mensagem #nome da etapa
+          run: echo "Olá, Mundo" #script que deve rodar
+    job2-goodbye:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Step 1 - Sequencia de instruções
+          run: | #para definir uma série de execuções, colocamos o pipe |
+            echo "Uma nova instrução" 
+            ls
+        - name: Step 2 - Imprimir mensagem
+          run: echo "Até logo!"
